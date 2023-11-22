@@ -6,7 +6,9 @@ import { useState } from 'react';
 import Header from './components/Header.js';
 import Home from './components/Home.js';
 import PlayerForm from './components/PlayerForm.js';
-import Round from './components/Round.js';
+import StartRound from './components/StartRound.js';
+import EndRound from './components/EndRound.js';
+import Score from './components/Score.js';
 
 
 function App(){
@@ -29,7 +31,9 @@ function App(){
                 <Routes>
                     <Route path="/" element={<Home/>} /> 
                     <Route path='/startGame' element={<PlayerForm players={players} setPlayers={setPlayers} />} />
-                    <Route path='/round' element={<Round />} />
+                    <Route path='/startRound' element={<StartRound players={players} />} />
+                    <Route path='/endRound' element={<EndRound />} />
+                    <Route path='/score' element={<Score />} />
                 </Routes>
             </>
         </BrowserRouter>

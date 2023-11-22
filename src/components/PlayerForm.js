@@ -42,7 +42,7 @@ function PlayerForm({players, setPlayers}){
         if(numberPlayer < 2){
             setErrorMessage('You have to be at least 2 players');
         }else{
-            navigate('/startGame/round');
+            navigate('/startRound');
         }
     }
 

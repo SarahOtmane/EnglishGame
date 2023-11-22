@@ -142,14 +142,16 @@ header .logo{
 
 
 /* ----------- Round ------------ */
-.Round article{
-    width: 90%;
+.StartRound article{
+    width: max-content;
+    margin: auto;
+    margin-top: 1.5rem;
 }
 
-.Round span{
-    width: 40%;
+.StartRound span{
+    width: max-content;
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 1.5rem 2rem;
     color: black;
 
     border: none;
@@ -157,6 +159,14 @@ header .logo{
     border-top-left-radius: 2rem;
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: 2rem;
+}
+
+.StartRound article span{
+    margin-right: 1rem;
+}
+
+.StartRound article span:last-child{
+    margin-right: -1rem;
 }
 
 .blue{background-color: #80F7FF;}
@@ -171,3 +181,17 @@ header .logo{
 
 .grey{background-color: #DBDBDB;}
 
+
+
+
+
+
+
+
+
+
+/* ----------- endRound ------------ */
+
+.endRound button{
+    margin-top: 30rem;
+}
