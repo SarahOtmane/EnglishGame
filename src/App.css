@@ -1,0 +1,173 @@
+
+/* ----------- Fonts ------------ */
+
+@font-face {
+    font-family: 'jost';
+    src: url('./assets/fonts/jost-variablefont_wght-webfont.eot');
+    src: url('./assets/fonts/jost-variablefont_wght-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./assets/fonts/jost-variablefont_wght-webfont.woff2') format('woff2'),
+         url('./assets/fonts/jost-variablefont_wght-webfont.woff') format('woff'),
+         url('./assets/fonts/jost-variablefont_wght-webfont.svg#jostregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'jost';
+    src: url('./assets/fonts/jost-italic-variablefont_wght-webfont.eot');
+    src: url('./assets/fonts/jost-italic-variablefont_wght-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./assets/fonts/jost-italic-variablefont_wght-webfont.woff2') format('woff2'),
+         url('./assets/fonts/jost-italic-variablefont_wght-webfont.woff') format('woff'),
+         url('./assets/fonts/jost-italic-variablefont_wght-webfont.svg#jostitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+/* ----------- global css -------- */
+body{
+    max-width: 576px!important;
+    font-family: 'jost', Arial, Helvetica, sans-serif;
+}
+
+#root{
+    background-color: black;
+}
+
+main{
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+}
+
+main h2{
+    width: 70%;
+    margin: auto;
+    font-size: 2.5rem;
+    margin-top: 3rem;
+}
+
+main p{
+    width: 80%;
+    margin: auto;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+main input, button{
+    margin: auto;
+    font-size: 1.5rem;
+}
+
+main input{
+    width: 73%;
+    padding: 1.3rem 0 1.3rem 2rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+}
+
+main button{
+    width: 80%;
+    padding: 1.5rem 0;
+    background-color: #80F7FF;
+    font-weight: bold;
+    margin-top: 3rem;
+    color: black;
+    border: none;
+    border-top-right-radius: .5rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: 2rem;
+}
+
+
+
+
+/* ----------- global class -------- */
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+
+/* ----------- Header ------------ */
+header{
+    padding-top: 2rem;
+}
+
+header .menuIcon, header .closeIcon{
+    color: white;
+    margin-left: 1rem;
+}
+
+header .logo{
+    margin: auto;
+}
+
+.MuiPaper-root{
+    color: white;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+/* ----------- Play ------------ */
+.Play input:first-child{
+    margin-top: 4rem;
+}
+
+.Play .addPlayer{
+    margin-top: 1rem !important;
+    background-color: black;
+    border: 2px solid #80F7FF;
+    color: #80F7FF;
+}
+
+.Play button:last-child{
+    margin-top: 15rem;
+}
+
+
+
+/* ----------- Round ------------ */
+.Round article{
+    width: 90%;
+}
+
+.Round span{
+    width: 40%;
+    text-align: center;
+    padding: 1.5rem 0;
+    color: black;
+
+    border: none;
+    border-top-right-radius: .5rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.blue{background-color: #80F7FF;}
+
+.green{background-color: #85FF82;}
+
+.pink{background-color: #FC6AFF;}
+
+.orange{background-color: #FEB078;}
+
+.yellow{background-color: #FFF066;}
+
+.grey{background-color: #DBDBDB;}
+

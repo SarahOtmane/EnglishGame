@@ -1,0 +1,51 @@
+import React, { useState } from "react";
+
+const PlayerForm = ({ onSubmit }) => {
+  const [playerNames, setPlayerNames] = useState([""]);
+
+  const handleInputChange = (index, event) => {
+    const newPlayerNames = [...playerNames];
+    newPlayerNames[index] = event.target.value;
+    setPlayerNames(newPlayerNames);
+    console.log(newPlayerNames);
+  };
+
+  const handleAddPlayer = () => {
+    setPlayerNames([...playerNames, ""]);
+  };
+
+  const handleRemovePlayer = (index) => {
+    const newPlayerNames = [...playerNames];
+    newPlayerNames.splice(index, 1);
+    setPlayerNames(newPlayerNames);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onSubmit(playerNames);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      {playerNames.map((name, index) => (
+        <div key={index}>
+          <input
+            type="text"
+            placeholder={`Joueur ${index + 1}`}
+            value={name}
+            onChange={(event) => handleInputChange(index, event)}
+          />
+          <button type="button" onClick={() => handleRemovePlayer(index)}>
+            Supprimer
+          </button>
+        </div>
+      ))}
+      <button type="button" onClick={handleAddPlayer}>
+        Ajouter un joueur
+      </button>
+      <button type="submit">Soumettre</button>
+    </form>
+  );
+};
+
+export default PlayerForm;
