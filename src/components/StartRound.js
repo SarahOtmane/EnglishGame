@@ -244,6 +244,31 @@ function StartRound({players, setPlayers,currentPlayerIndex, setCurrentPlayerInd
                     </article>
 
                     <article className="row">
+                        <label className="rainbowF">
+                            <input
+                            type="radio"
+                            value="1"
+                            name='<id>'
+                            checked={valeurSelectionnee === '<id>'}
+                            onChange={handleChangementSelection}
+                            hidden
+                            />
+                            {'id'}
+                        </label>
+                        <label className="rainbow">
+                            <input
+                            type="radio"
+                            value="1"
+                            name='<class>'
+                            checked={valeurSelectionnee === '<class>'}
+                            onChange={handleChangementSelection}
+                            hidden
+                            />
+                            {'class'}
+                        </label>
+                    </article>
+
+                    <article className="row">
                         <label className="blue skip">
                             <input
                             type="radio"
