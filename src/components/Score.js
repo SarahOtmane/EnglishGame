@@ -20,6 +20,15 @@ function Score({players, setPlayers}){
             <h2>Congratulations !</h2>
             <p>You win the game with a total of {players[0].point} points !</p>
 
+            <section>
+            {
+                players.map(player =>( <div key={player.index} className="row" >
+                    <span>{player.name}</span>
+                    <span>{player.point}</span>
+                </div> ))
+            }
+            </section>
+
             <button className="returnHome" onClick={returnHome}>Return home</button>
         </main>
     )

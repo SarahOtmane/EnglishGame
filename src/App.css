@@ -260,5 +260,31 @@ header .logo{
 
 /* ----------- score ------------ */
 .score div{
-    background-color: blue;
+    width: 75%;
+    justify-content: space-between;
+    margin: auto;
+    border: 2px solid white;
+    border-radius: .5rem;
+    padding: 1.5rem .6rem;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    font-weight: bolder;
+}
+
+.score section div:first-child{
+    color: black;
+    background: linear-gradient(
+        135deg,
+        #B9FF82,
+        #FFF066,
+        #FEB078,
+        #FC6AFF,
+        #7ED8FF,
+        #b9ff82
+    );
+    margin: 5rem auto 3rem;
+}
+
+.score div span:first-child{
+   font-weight: lighter;
 }
