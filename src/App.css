@@ -100,6 +100,13 @@ main button{
     flex-wrap: nowrap;
 }
 
+.Play .fix, .StartRound .fix1{
+    position: fixed;
+    width: max-content;
+    padding: 1.5rem 9rem;
+    bottom: 4%;
+    left: 8%;
+}
 
 /* ----------- Header ------------ */
 header{
@@ -148,28 +155,33 @@ header .logo{
     margin-top: 1.5rem;
 }
 
-.StartRound span{
+.StartRound label{
     width: max-content;
     text-align: center;
     padding: 1.5rem 2rem;
-    color: black;
+    color: black !important;
+    font-size: 1.4rem;
+    margin-top: 0;
 
     border: none;
     border-top-right-radius: .5rem;
     border-top-left-radius: 2rem;
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: 2rem;
+
+    cursor: pointer;
 }
 
-.StartRound article span{
+.StartRound article label{
     margin-right: 1rem;
 }
 
-.StartRound article span:last-child{
+.StartRound article label:last-child{
     margin-right: -1rem;
 }
 
 .blue{background-color: #80F7FF;}
+.blueSelect{background-color: black; color : #80F7FF; border: 2px solid #80F7FF;}
 
 .green{background-color: #85FF82;}
 
@@ -181,10 +193,22 @@ header .logo{
 
 .grey{background-color: #DBDBDB;}
 
+.blue.skip{
+    margin-top: 2rem;
+    padding: 1.5rem 5rem;
+}
 
 
+.StartRound .scroll{
+    max-height: 60vh;
+    overflow-y: scroll;
+}
 
-
+.StartRound .fix1{
+    padding: 1.5rem 6rem;
+    left: 11%;
+    bottom: 3%;
+}
 
 
 
@@ -194,4 +218,10 @@ header .logo{
 
 .endRound button{
     margin-top: 30rem;
+}
+
+
+/* ----------- score ------------ */
+.score div{
+    background-color: blue;
 }

@@ -1,14 +1,21 @@
+import { useNavigate } from "react-router-dom";
 
+function EndRound({players, currentPlayerIndex}){
 
-function EndRound(){
+    const navigate = useNavigate();
+
+    const showScore = () =>{
+        navigate('/score');
+    }
+
     return(
         <main className="endRound">
-            <h1>Name, finished coding !</h1>
+            <h1>{players[currentPlayerIndex].name}, finished coding !</h1>
             <p>The game is over</p>
 
             <h2>And the winner is ...</h2>
 
-            <button>See the scores</button>
+            <button onClick={showScore} >See the scores</button>
         </main>
     )
 }

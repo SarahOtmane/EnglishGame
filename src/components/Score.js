@@ -1,17 +1,26 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
-function Score(){
+function Score({players, setPlayers}){
+
+    useEffect(() => {
+        const sortedPlayers = [...players].sort((a, b) => b.point - a.point);   
+        setPlayers(sortedPlayers);
+    }, []);
+
     const navigate = useNavigate();
 
+    const returnHome = () =>{
+        navigate('/');
+    }
+
     return(
-        <main>
-            <h2>Name !</h2>
+        <main className="score">
+            <h2>{players[0].name} !</h2>
             <h2>Congratulations !</h2>
-            <p>You win the game with a total of 120 points !</p>
+            <p>You win the game with a total of {players[0].point} points !</p>
 
-            
-
-            <button onClick={navigate('/')}>Return home</button>
+            <button className="returnHome" onClick={returnHome}>Return home</button>
         </main>
     )
 }

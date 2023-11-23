@@ -23,6 +23,8 @@ function App(){
         point : 0
     }]);
 
+    const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0);
+
     return(
         <BrowserRouter>
             <>
@@ -31,9 +33,9 @@ function App(){
                 <Routes>
                     <Route path="/" element={<Home/>} /> 
                     <Route path='/startGame' element={<PlayerForm players={players} setPlayers={setPlayers} />} />
-                    <Route path='/startRound' element={<StartRound players={players} />} />
-                    <Route path='/endRound' element={<EndRound />} />
-                    <Route path='/score' element={<Score />} />
+                    <Route path='/startRound' element={<StartRound players={players} setPlayers={setPlayers} currentPlayerIndex={currentPlayerIndex} setCurrentPlayerIndex={setCurrentPlayerIndex}  />} />
+                    <Route path='/endRound' element={<EndRound players={players} currentPlayerIndex={currentPlayerIndex} />} />
+                    <Route path='/score' element={<Score players={players} setPlayers={setPlayers} />} />
                 </Routes>
             </>
         </BrowserRouter>

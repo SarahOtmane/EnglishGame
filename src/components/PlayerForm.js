@@ -32,14 +32,15 @@ function PlayerForm({players, setPlayers}){
     const validatePlayers = (e) =>{
         console.log(players);
         e.preventDefault();
-        let numberPlayer = 0;
+        let filteredPlayers;
         
         for (let i=0; i<players.length; i++){
-            let player = players[i].name.trim();
-            player === "" ? (numberPlayer = numberPlayer) : (numberPlayer++);
+            filteredPlayers = players.filter(player => player.name.trim() !== "");
         }
 
-        if(numberPlayer < 2){
+        setPlayers(filteredPlayers);
+
+        if(players.length < 2){
             setErrorMessage('You have to be at least 2 players');
         }else{
             navigate('/startRound');
@@ -57,7 +58,7 @@ function PlayerForm({players, setPlayers}){
                 <input
                   key={player.index}
                   type="text"
-                  placeholder={`Name of player ${player.index}`}
+                  placeholder={`Name of player ${player.index+1}`}
                   defaultValue={player.name}
                   onChange={(e) => handleInputChange(player, e)}
                 />
@@ -69,7 +70,7 @@ function PlayerForm({players, setPlayers}){
                 <button onClick={addPlayer} className='addPlayer'>+ Add a player</button>
 
                 {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-                <button onClick={validatePlayers} >We are ready !</button>
+                <button onClick={validatePlayers} className="fix" >We are ready !</button>
             </form>
         </main>
     )
