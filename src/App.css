@@ -116,18 +116,55 @@ header{
 header .menuIcon, header .closeIcon{
     color: white;
     margin-left: 1rem;
+    font-size: 10rem;
+}
+
+header svg{
+    width: 10rem;
 }
 
 header .logo{
     margin: auto;
 }
 
+/* menu burger */
+
 .MuiPaper-root{
-    color: white;
-    width: 100%;
+    background-color: black!important;
+    width: 576px;
     height: 100vh;
 }
 
+.MuiPaper-root div{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.MuiPaper-root div button{
+    color: white;
+    padding-left: 2rem;
+}
+
+.MuiPaper-root div img{
+    width: 20%;
+    margin-left: 30%;
+}
+
+.MuiPaper-root ul{
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.MuiPaper-root ul a, .MuiPaper-root ul div, .MuiPaper-root ul span{
+    width: max-content;
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
 
 
 /* ----------- Play ------------ */

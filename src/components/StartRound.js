@@ -9,10 +9,9 @@ function StartRound({players, setPlayers,currentPlayerIndex, setCurrentPlayerInd
     const [nameSelectionnee, setNameSelectionnee] = useState('');
 
     const handleChangementSelection = (event) => {
-      setValeurSelectionnee(event.target.value);
-      setNameSelectionnee(event.target.name);
+        setValeurSelectionnee(event.target.value);
+        setNameSelectionnee(event.target.name);
     };
-  
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -21,7 +20,7 @@ function StartRound({players, setPlayers,currentPlayerIndex, setCurrentPlayerInd
         
         setPlayers(newPlayersTab);
 
-        if(nameSelectionnee != '</footer>'){
+        if(nameSelectionnee !== '</footer>'){
             if(currentPlayerIndex+1 < players.length){
                 setCurrentPlayerIndex(prevCurrentPlayer => {
                 let newCurrentPlayerIndex = prevCurrentPlayer + 1;
@@ -44,8 +43,8 @@ function StartRound({players, setPlayers,currentPlayerIndex, setCurrentPlayerInd
         <main className="StartRound">
             <h2>{players[currentPlayerIndex].name}, it's your turn !</h2>
             <p>You currently have {players[currentPlayerIndex].point} points</p>
-
-            <form onSubmit={handleSubmit}>
+                
+                <form onSubmit={handleSubmit}>
                 <section className="scroll">
                     <article className="row">
                         <label className="blue">

@@ -17,6 +17,10 @@ function Header() {
         setOpen(isOpen);
     };
 
+    const closeDrawer = () => {
+        setOpen(false);
+    };
+
     const links = [
         { text: 'Home', path: '/' },
         { text: 'Start a game', path: '/startGame' },
@@ -44,7 +48,7 @@ function Header() {
                     {links.map((link, index) => (
                         <Link to={link.path} key={index}>
                             <ListItem button key={index}>
-                                <ListItemText primary={link.text} />
+                                <ListItemText primary={link.text} onClick={toggleDrawer(false)} />
                             </ListItem>
                         </Link>
                     ))}
