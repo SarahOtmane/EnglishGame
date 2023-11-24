@@ -3,6 +3,19 @@ import { useNavigate } from "react-router-dom";
 function Home(){
     const navigate = useNavigate();
 
+    const handleDownload = () => {
+        const pdfPath = '../assets/Rules.pdf';
+        const link = document.createElement('a');
+    
+        link.href = pdfPath;
+        link.download = 'Rules.pdf';
+    
+        document.body.appendChild(link);
+        link.click();
+    
+        document.body.removeChild(link);
+      };
+
     return(
         <main className="Home">
             <section>
@@ -13,6 +26,7 @@ function Home(){
 
             <section>
                 <h2>How to play ?</h2>
+                <button onClick={handleDownload} >Download the rules</button>
             </section>
         </main>
     )
