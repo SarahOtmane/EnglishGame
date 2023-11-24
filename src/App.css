@@ -239,8 +239,7 @@ header .logo{
 .StartRound .fix1{
     position: fixed;
     width: max-content;
-    max-width: 75%;
-    padding: 1.5rem 6rem;
+    width: 75%;
     left: 11%;
     bottom: 3%;
 }
