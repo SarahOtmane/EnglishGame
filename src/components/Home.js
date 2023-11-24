@@ -4,11 +4,11 @@ function Home(){
     const navigate = useNavigate();
 
     const handleDownload = () => {
-        const pdfPath = '../assets/Rules.pdf';
+        const pdfPath = '../assets/rules.pdf';
         const link = document.createElement('a');
     
         link.href = pdfPath;
-        link.download = 'Rules.pdf';
+        link.download = 'rules.pdf';
     
         document.body.appendChild(link);
         link.click();
