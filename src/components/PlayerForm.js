@@ -70,7 +70,7 @@ function PlayerForm({players, setPlayers}){
                 <button onClick={addPlayer} className='addPlayer'>+ Add a player</button>
 
                 {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-                <button onClick={validatePlayers} className="fix" >We are ready !</button>
+                <button onClick={validatePlayers} >We are ready !</button>
             </form>
         </main>
     )

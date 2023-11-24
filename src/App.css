@@ -100,15 +100,6 @@ main button{
     flex-wrap: nowrap;
 }
 
-.Play .fix, .StartRound .fix1{
-    position: fixed;
-    width: max-content;
-    max-width: 75%;
-    padding: 1.5rem 9rem;
-    bottom: 4%;
-    left: 4%;
-}
-
 /* ----------- Header ------------ */
 header{
     padding-top: 2rem;
@@ -246,12 +237,13 @@ header .logo{
 }
 
 .StartRound .fix1{
+    position: fixed;
+    width: max-content;
+    max-width: 75%;
     padding: 1.5rem 6rem;
     left: 11%;
     bottom: 3%;
 }
-
-
 
 
 
