@@ -4,7 +4,7 @@ function Home(){
     const navigate = useNavigate();
 
     const handleDownload = () => {
-        const pdfPath = '../assets/rules.pdf';
+        const pdfPath = '../../rules.pdf';
         const link = document.createElement('a');
     
         link.href = pdfPath;

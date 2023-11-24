@@ -140,17 +140,17 @@ header .logo{
 
 .MuiPaper-root div img{
     width: 20%;
-    margin-left: 30%;
+    margin-left: 20%;
 }
 
 .MuiPaper-root ul{
     text-align: center;
     padding-top: 5rem;
+    margin-left: 20%;
 }
 
 .MuiPaper-root ul a, .MuiPaper-root ul div, .MuiPaper-root ul span{
     width: max-content;
-    margin: auto;
     text-decoration: none;
     color: white;
     font-size: 1.7rem;
