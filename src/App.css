@@ -103,6 +103,7 @@ main button{
 .Play .fix, .StartRound .fix1{
     position: fixed;
     width: max-content;
+    max-width: 75%;
     padding: 1.5rem 9rem;
     bottom: 4%;
     left: 4%;
